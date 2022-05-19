@@ -1,0 +1,256 @@
+Comandos GIT: 
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c
+$ ls
+$ cd workspace/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace
+$ mkdir livro-receitas
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace
+$ ls
+livro-receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace
+$ cd livro-receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas
+$ git init
+Initialized empty Git repository in C:/workspace/livro-receitas/.git/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ ls -a
+./  ../  .git/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ cd .git/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas/.git (GIT_DIR!)
+$ cd ..
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git config --global user.email "amanda_mpinheiro@hotmail.com"
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git config --global user.name Amanda
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git add *
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "commit inicial"
+[master (root-commit) 7c23373] commit inicial
+ 2 files changed, 35 insertions(+)
+ create mode 100644 desktop.ini
+ create mode 100644 strogonoff.md
+
+---------------------------------------------
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+desktop.ini  strogonoff.md
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   strogonoff.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git add .
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   strogonoff.md
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "Atualizando receita"
+[master 3b0b303] Atualizando receita
+ 1 file changed, 68 insertions(+)
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ mkdir receitas
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+desktop.ini  receitas/  strogonoff.md
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ mv strogonoff.md ./receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+desktop.ini  receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    strogonoff.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        receitas/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git add strogonoff.md receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    strogonoff.md -> receitas/strogonoff.md
+
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "Cria pasta receitas, move arquivo para receitas"
+[master 4da43c2] Cria pasta receitas, move arquivo para receitas
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename strogonoff.md => receitas/strogonoff.md (100%)
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+desktop.ini  receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ echo > README.md
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+README.md  desktop.ini  receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git add *
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+README.md  desktop.ini  receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "Adiciona index"
+[master 0ea36fc] Adiciona index
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README.md
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git config --list
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git config --global --unset user.email
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git config --global --unset user.name
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git config --list
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git config --global user.email "amanda_mpinheiro@hotmail.com"
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git config --global user.name "AmandaMPinheiro"
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git config --list
+
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+README.md  desktop.ini  receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git remote add origin https://github.com/AmandaMPinheiro/livro-receitas.git
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git remote -v
+origin  https://github.com/AmandaMPinheiro/livro-receitas.git (fetch)
+origin  https://github.com/AmandaMPinheiro/livro-receitas.git (push)
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git push origin master
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ ls
+README.md  desktop.ini  receitas/
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git add *
+warning: LF will be replaced by CRLF in README.md.
+The file will have its original line endings in your working directory
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git commit -m "Adiciona receita pave"
+[master 10fbf46] Adiciona receita pave
+ 1 file changed, 1 insertion(+)
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git push origin master
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git pull origin master
+From https://github.com/AmandaMPinheiro/livro-receitas
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+amand@LAPTOP-I0JUFC93 MINGW64 /c/workspace/livro-receitas (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
