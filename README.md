@@ -11,10 +11,10 @@ Módulo 2:
 - project-flexbox-dio: Projeto e prática desenvolvido na aula de Flexbox-CSS do Bootcamp Spread Fullstack Developer.
 - HTML5-CSS3: Prática desenvolvida na aula de HTML e CSS do Bootcamp Spread Fullstack Developer.
 - Projeto PHP: Prática desenvolvida na aula Introdução à programação para internet do Bootcamp Spread Fullstack Developer.
+- Projeto-instagram: Projeto Instagram desenvolvido no Módulo 2 do Bootcamp Spread Fullstack Developer.
 
 
 
 Módulo 3: 
 
-- 
 
